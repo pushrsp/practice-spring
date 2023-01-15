@@ -1,9 +1,7 @@
 package com.example.practicespring.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.practicespring.dto.UserDto;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
@@ -15,4 +13,9 @@ public class ApiController {
         return account;
     }
     
+    /* json */
+    @PostMapping("/json")
+    public UserDto json(@RequestBody UserDto userDto) {
+        return userDto;
+    }
 }
