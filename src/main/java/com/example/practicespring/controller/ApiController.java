@@ -27,4 +27,10 @@ public class ApiController {
         return ResponseEntity.status(HttpStatus.CREATED).body(userDto);
     }
 
+    /* html */
+    @GetMapping("/html")
+    public String html() {
+        return "main.html";
+    }
+
 }
